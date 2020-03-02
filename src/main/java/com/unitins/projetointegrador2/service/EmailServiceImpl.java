@@ -1,4 +1,4 @@
-package com.unitins.projetointegrador2.services;
+package com.unitins.projetointegrador2.service;
 
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;

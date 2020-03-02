@@ -1,6 +1,6 @@
 package com.unitins.projetointegrador2.security;
 
-import com.unitins.projetointegrador2.models.Pessoa;
+import com.unitins.projetointegrador2.model.Pessoa;
 import com.unitins.projetointegrador2.repository.PessoaRepository;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.security.core.userdetails.UserDetails;
