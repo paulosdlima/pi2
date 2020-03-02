@@ -1,6 +1,6 @@
-package com.unitins.projetointegrador2.services;
+package com.unitins.projetointegrador2.service;
 
-import com.unitins.projetointegrador2.models.Pessoa;
+import com.unitins.projetointegrador2.model.Pessoa;
 import com.unitins.projetointegrador2.repository.PessoaRepository;
 import org.springframework.stereotype.Service;
 

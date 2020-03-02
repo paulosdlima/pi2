@@ -1,4 +1,4 @@
-package com.unitins.projetointegrador2.models;
+package com.unitins.projetointegrador2.model;
 
 public enum Status {
     ANALISE(1, "Em Análise"),

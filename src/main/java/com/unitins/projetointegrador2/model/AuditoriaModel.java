@@ -1,4 +1,4 @@
-package com.unitins.projetointegrador2.models;
+package com.unitins.projetointegrador2.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
