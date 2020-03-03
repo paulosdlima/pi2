@@ -1,5 +1,8 @@
 package com.unitins.projetointegrador2.security;
 
+import com.unitins.projetointegrador2.model.PerguntasFrequentes;
+import com.unitins.projetointegrador2.repository.PerguntasFrequentesRepository;
+
 import com.unitins.projetointegrador2.model.Pessoa;
 import com.unitins.projetointegrador2.repository.PessoaRepository;
 import org.springframework.security.core.userdetails.*;
@@ -13,9 +16,11 @@ import org.springframework.transaction.annotation.Transactional;
 public class ImplementsUserDetailsService implements UserDetailsService {
 
     private final PessoaRepository pessoaRepository;
+    private final PerguntasFrequentesRepository perguntasFrequentesRepository;
 
-    public ImplementsUserDetailsService(PessoaRepository pessoaRepository) {
+    public ImplementsUserDetailsService(PessoaRepository pessoaRepository, PerguntasFrequentesRepository perguntasFrequentesRepository) {
         this.pessoaRepository = pessoaRepository;
+        this.perguntasFrequentesRepository = perguntasFrequentesRepository;
     }
 
     @Override
