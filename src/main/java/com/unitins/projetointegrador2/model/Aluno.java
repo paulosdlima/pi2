@@ -1,11 +1,18 @@
 package com.unitins.projetointegrador2.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Aluno extends Pessoa {
+public class Aluno extends Pessoa implements Serializable {
 
+	/**
+	 * 
+	 * @author Gemido
+	 */
+	private static final long serialVersionUID = 1L;
 	@ManyToOne
 	private Turma turma;
 
