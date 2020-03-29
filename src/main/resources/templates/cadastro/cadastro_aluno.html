@@ -21,9 +21,7 @@
 			</section>
 
 			<!-- Main content -->
-			<section class="content container-fluid">
-
-				<form action="salvar_aluno" id="formaluno" method="post"
+				<form action="@{salvar_aluno}" id="formaluno" method="post"
 					th:object="${aluno_obj}" class="form-horizontal">
 
 						<div class="form-group">
@@ -68,9 +66,35 @@
 						<!-- /.box-footer -->
 				</form>
 
-			</section>
 			<!-- /.content -->
 		</div>
+	<table class="striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>email</th>
+				<th>Editar</th>
+				<th>Excluir</th>
+			</tr>
+		</thead>
+
+		<tr th:each="aluno : ${alunos}">
+
+			<td th:text="${aluno.id}"></td>
+			<td th:text="${aluno.nome}"></td>
+			<td th:text="${aluno.matricula}"></td>
+			<td th:text="${aluno.cpf}"></td>
+			<td th:text="${aluno.email}"></td>
+			<td><a
+				th:href="@{/alterar_aluno/{id_aluno}(id_aluno=${aluno.id})}">
+					Editar </a></td>
+			<td><a
+				th:href="@{/deletar_aluno/{id_aluno}(id_aluno=${aluno.id})}">
+					Excluir </a></td>
+		</tr>
+
+	</table>
 
 		<div th:replace="fragments/footer :: footer"></div>
 		<div th:replace="fragments/sidebar :: sidebar-control"></div>
